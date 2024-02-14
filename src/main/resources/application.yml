@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: root
+    password: efe@123#
+    url: jdbc:mysql://localhost:3306/student_demo
+    driver-class-name: com.mysql.cj.jdbc.Driver
+jpa:
+  show-sql: true
+  hibernate:
+    ddl-auto: create
+    format_sql: true
