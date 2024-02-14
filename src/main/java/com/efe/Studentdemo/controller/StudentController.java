@@ -31,15 +31,11 @@ public class StudentController {
         return ResponseEntity.ok(studentService.updateStudent(student, id));
     }
 
-    @GetMapping("/student/{id}")
-    public Student getStudentById(@PathVariable Long id){
-        return studentService.getStudentById(id);
-    }
 
-//    @GetMapping("/student/{id}")
-//    public ResponseEntity<Student> getStudentById(@PathVariable Long id){
-//        return ResponseEntity.ok(studentService.getStudentById(id));
-//    }
+    @GetMapping("/student/{id}")
+    public ResponseEntity<Student> getStudentById(@PathVariable Long id){
+        return ResponseEntity.ok(studentService.getStudentById(id));
+    }
 
     @DeleteMapping("/delete/{id}")
     public void deleteById(@PathVariable Long id){
